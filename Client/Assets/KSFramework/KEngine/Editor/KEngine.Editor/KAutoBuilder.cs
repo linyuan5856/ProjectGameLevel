@@ -292,7 +292,7 @@ namespace KEngine.Editor
 
             //settings
             EditorUserBuildSettings.development = isDevelopment;
-            EditorUserBuildSettings.androidCreateSymbolsZip = true;
+            EditorUserBuildSettings.androidCreateSymbols= AndroidCreateSymbols.Public;
             PlayerSettings.Android.forceSDCardPermission = true;//申请工信部版号时，可关闭
             PlayerSettings.Android.forceInternetPermission = true;
             PlayerSettings.Android.renderOutsideSafeArea = true; //刘海屏

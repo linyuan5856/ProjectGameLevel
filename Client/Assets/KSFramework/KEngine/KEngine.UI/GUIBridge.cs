@@ -43,11 +43,6 @@ namespace KEngine.UI
             gameObject = new GameObject("EventSystem");
             EventSystem = gameObject.AddComponent<EventSystem>();
             var inputModule = gameObject.AddComponent<StandaloneInputModule>();
-#if UNITY_4
-            gameObject.AddComponent<TouchInputModule>();
-#else
-            inputModule.forceModuleActive = true;
-#endif
         }
 
         /// <summary>

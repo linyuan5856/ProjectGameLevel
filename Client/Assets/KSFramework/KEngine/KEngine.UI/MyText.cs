@@ -1,7 +1,6 @@
 ﻿using System;
 using KEngine;
 using KSFramework;
-using UnityEngine;
 
 namespace UnityEngine.UI
 {
@@ -17,19 +16,14 @@ namespace UnityEngine.UI
         [SerializeField] public string LangId;
         [SerializeField] public string[] LangParams;
 
-        void Start()
+        protected override void Start()
         {
-            if (UseLangId && string.IsNullOrEmpty(text))
-            {
-                if (!string.IsNullOrEmpty(LangId))
-                {
-                    text = I18N.Get(LangId, LangParams);
-                }
-                else
-                {
-                    Log.LogError($"{KTool.GetRootPathName(this.transform)},lang id is null");
-                }
-            }
+            base.Start();
+            if (!UseLangId || !string.IsNullOrEmpty(text)) return;
+            if (!string.IsNullOrEmpty(LangId))
+                text = I18N.Get(LangId, LangParams);
+            else
+                Log.LogError($"{KTool.GetRootPathName(this.transform)},lang id is null");
         }
     }
 }

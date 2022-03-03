@@ -298,7 +298,7 @@ namespace KEngine.Editor
             image.raycastTarget = false;
         }
 
-        [MenuItem("GameObject/UI/Raw Image/创建", false, 2002)]
+        [MenuItem("GameObject/UI/Raw Image/Create", false, 2002)]
         static public void AddRawImage(MenuCommand menuCommand)
         {
             GameObject go = DefaultControls.CreateRawImage(GetStandardResources());

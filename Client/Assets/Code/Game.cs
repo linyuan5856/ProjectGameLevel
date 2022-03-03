@@ -109,21 +109,21 @@ public class Game : KSGame
             Debug.Log(string.Format("C# Read Setting, Key: {0}, Value: {1}", setting.Id, setting.Title));
         }
         
-        UIModule.Instance.OpenWindow("UILogin", 888);
+        //UIModule.Instance.OpenWindow("UILogin", 888);
 
         // Test Load a scene in asset bundle
-        SceneLoader.Load("Scene/Scene1001/Scene1001");
+        //SceneLoader.Load("Scene/Scene1001/Scene1001");
         
         //预加载公告界面
         // UIModule.Instance.PreLoadUIWindow("Billboard");
         //UIModule.Instance.OpenWindow("Billboard");
          // 测试Collect函数，立即回收所有资源
-        var path = "ui/UIRoleInfo";
-        var assetLoader = AssetBundleLoader.Load(path); 
-        while (!assetLoader.IsCompleted)             
-            yield return null;
-        yield return new WaitForSeconds(1);
-        assetLoader.Release();
+        // var path = "ui/UIRoleInfo";
+        // var assetLoader = AssetBundleLoader.Load(path); 
+        // while (!assetLoader.IsCompleted)             
+        //     yield return null;
+        // yield return new WaitForSeconds(1);
+        // assetLoader.Release();
   
         KResourceModule.Collect();
     }
