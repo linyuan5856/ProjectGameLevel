@@ -101,15 +101,8 @@ public class Game : KSGame
         {
             yield return wait;
         }
-        Log.Info(I18N.Get("btn_billboard"));
-        // Print AppConfigs
-        // Log.Info("======================================= Read Settings from C# =================================");
-        foreach (BillboardSetting setting in BillboardSettings.GetAll())
-        {
-            Debug.Log(string.Format("C# Read Setting, Key: {0}, Value: {1}", setting.Id, setting.Title));
-        }
         
-        //UIModule.Instance.OpenWindow("UILogin", 888);
+        UIModule.Instance.OpenWindow("UILogin");
 
         // Test Load a scene in asset bundle
         //SceneLoader.Load("Scene/Scene1001/Scene1001");

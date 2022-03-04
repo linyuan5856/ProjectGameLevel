@@ -45,13 +45,7 @@ namespace AppSettings
                 {
                     _settingsList = new IReloadableSettings[]
                     {
-                     	BaseSettings._instance ,
-						BillboardSettings._instance ,
-						EnUSSettings._instance ,
-						StringsTableSettings._instance ,
-						TSVSettings._instance ,
-						ZhCNSettings._instance
-
+                     
                     };
                 }
                 return _settingsList;

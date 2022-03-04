@@ -65,7 +65,7 @@ Tools 		= import("Tools")
 import("CSharpBinding")
 
 --import lua config
-Billboard = import("configs/Billboard")
+--Billboard = import("configs/Billboard")
 print("Init.lua script finish!")
 --lua debug 可以使用emmylua(1.3.5) + idea或rider2020及以上版本进行调试
 --[[
