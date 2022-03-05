@@ -101,9 +101,8 @@ public class Game : KSGame
         {
             yield return wait;
         }
-        
         UIModule.Instance.OpenWindow("UILogin");
-
+        
         // Test Load a scene in asset bundle
         //SceneLoader.Load("Scene/Scene1001/Scene1001");
         

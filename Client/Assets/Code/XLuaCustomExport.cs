@@ -4,6 +4,7 @@ using System.Reflection;
 //using DG.Tweening;
 using KEngine;
 using KEngine.UI;
+using KSFramework;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -119,7 +120,7 @@ public static class XLuaCustomExport
         typeof(System.Action<GameObject>),
         typeof(KSFramework.LuaUIController),
 
-        //typeof(LuaBehaviour),
+        typeof(LuaBehaviour),
         typeof(KEngine.AssetFileLoader),
         //typeof(KEngine.StaticAssetLoader),
         //typeof(KEngine.SpriteLoader), 
