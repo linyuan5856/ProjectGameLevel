@@ -1,8 +1,8 @@
 -- 断点调试
 -- true为开启断点调试
 -- false为不开启断点调试
---local emmyLuaDebug=true
-local emmyLuaDebug=true
+local emmyLuaDebug=false
+-- emmyLuaDebug=true
 if emmyLuaDebug then
     package.cpath = package.cpath .. ';C:/Users/linyu/AppData/Local/JetBrains/Toolbox/apps/IDEA-U/ch-0/213.6777.52.plugins/EmmyLua/debugger/emmy/windows/x64/?.dll'
     local dbg = require('emmy_core')

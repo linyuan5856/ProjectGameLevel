@@ -2,7 +2,6 @@ local UIBase = import('UI/UIBase')
 ---@type UILogin
 local UILogin = {}
 extends(UILogin, UIBase)
-local  primitiveType=CS.UnityEngine.PrimitiveType
 
 -- create a ui instance
 function UILogin.New(controller)
@@ -23,10 +22,16 @@ end
 function UILogin:OnLoginBtnClick()
     Log.Info("fuck login")
     SceneLoader.Load("Scene/Scene101/Scene101", function(success)
-        --@type GameObject
-        local go = GameObject.CreatePrimitive(primitiveType.Cube)
-        go.name="test Cube"
-        LuaBehaviour.Create(go, "Behaviour/TestLuaBehaviour")
+
+        AssetBundleLoader.Load("Prefab/Character/CharacterDwarf",function(isOk,ab)
+            if isOk and ab then
+                ---@type GameObject
+                local asset = ab:LoadAsset("CharacterDwarf");
+                local prefab = Object.Instantiate(asset)
+                LuaBehaviour.Create(prefab , "Behaviour/TestLuaBehaviour")
+            end
+            UIModule.Instance:CloseWindow("UILogin")
+        end,LoaderMode.Async)
     end)
 end
 
